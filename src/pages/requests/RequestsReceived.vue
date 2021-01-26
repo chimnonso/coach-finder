@@ -1,5 +1,5 @@
 <template>
     <section>
-        register
+        Requests
     </section>
 </template>

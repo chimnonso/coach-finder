@@ -8,7 +8,7 @@ import NotFound from "./pages/NotFound.vue";
 
 
 const router = createRouter({
-    history: createWebHistory,
+    history: createWebHistory(),
     routes: [
         { path: '/', redirect: '/coaches' },
         { path: '/coaches', component: CoachesList },
