@@ -26,4 +26,9 @@ html {
 body {
   margin: 0;
 }
+
+router-link:hover,
+button:hover {
+  cursor: pointer;
+}
 </style>
