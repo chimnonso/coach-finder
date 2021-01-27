@@ -4,9 +4,9 @@
     </section>
     <section>
         <base-card>
-            <div class="control">
-                <base-button  mode="outline">refesh</base-button>
-                <base-button link to="/register">Register a Coach</base-button >
+            <div class="controls">
+                <base-button  mode="outline">Refesh</base-button>
+                <base-button v-if="!isCoach" link to="/register">Register as Coach</base-button >
             </div>
             <ul v-if="hasCoaches">
                 <coach-item v-for="coach in filteredCoaches" 
@@ -60,6 +60,9 @@ export default {
         },
         hasCoaches() {
             return this.$store.getters['coaches/hasCoaches'];
+        },
+        isCoach() {
+            return this.$store.getters['coaches/isCoach'];
         }
     },
 
