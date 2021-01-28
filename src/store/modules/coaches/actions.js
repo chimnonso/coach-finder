@@ -1,5 +1,6 @@
 export default {
     registerCoach(context, payload) {
+        console.log(context);
         const coachData = {
             id: context.rootGetters.userId,
             firstName: payload.first,
@@ -8,6 +9,7 @@ export default {
             hourlyRate: payload.rate,
             areas: payload.areas
         }
+        console.log(coachData);
         context.commit('registerCoach', coachData);
     }
 };
